@@ -23,10 +23,11 @@ class _NewExpenseState extends State<NewExpense> {
     final firstDate = DateTime(now.year - 1, now.month, now.day);
 
     final DateTime? pickedDate = await showDatePicker(
-        context: context,
-        initialDate: now,
-        firstDate: firstDate,
-        lastDate: now);
+      context: context,
+      initialDate: now,
+      firstDate: firstDate,
+      lastDate: now,
+    );
 
     setState(() {
       _selectedDate = pickedDate;
